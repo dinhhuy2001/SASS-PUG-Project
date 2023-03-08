@@ -5,15 +5,11 @@
 }
 
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-      "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-primary: "Amatic SC", sans-serif;
-  --font-secondary: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-default);
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #212529;
 }
 
@@ -35,13 +31,13 @@ section {
   padding: 0;
   color: #7f7f90;
   text-transform: uppercase;
-  font-family: var(--font-default);
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .section__header p {
   margin: 0;
   font-size: 48px;
   font-weight: 400;
-  font-family: var(--font-primary);
+  font-family: "Amatic SC", sans-serif;
 }
 .section__header p span {
   color: #ce1212;
@@ -65,6 +61,15 @@ a:hover {
   text-decoration: none;
 }
 
+.book-a-table .container .reservation-form-bg form button, .contact .container form button, nav .container .nav-menu .book a {
+  font-size: 14px;
+  color: #fff;
+  background: #ce1212;
+  transition: 0.4s;
+  border-radius: 50px;
+  border: 0;
+}
+
 .section-bg {
   background-color: #eee;
 }
@@ -75,7 +80,51 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-secondary);
+  font-family: "Inter", sans-serif;
+}
+
+.footer {
+  font-size: 14px;
+  background-color: #1f1f24;
+  padding: 50px 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+.footer .icon {
+  margin-right: 15px;
+  font-size: 24px;
+}
+.footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  color: #fff;
+}
+.footer .social--links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 10px;
+  transition: 0.3s;
+}
+.footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer .credits {
+  padding-top: 4px;
+  text-align: center;
+  font-size: 13px;
+}
+.footer .credits a {
+  color: #fff;
 }
 
 nav {
@@ -107,19 +156,13 @@ nav .container .nav-menu .navbar-nav .nav-item {
 }
 nav .container .nav-menu .navbar-nav .nav-item .nav-link {
   padding: 0 3px;
-  font-family: var(--font-secondary);
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #7f7f90;
   white-space: nowrap;
 }
-nav .container .nav-menu .book button {
-  font-size: 14px;
-  color: #fff;
-  background: #ce1212;
-  transition: 0.4s;
-  border-radius: 50px;
-  border: 0;
+nav .container .nav-menu .book a {
   padding: 9px 20px;
   margin-left: 30px;
 }
@@ -143,7 +186,7 @@ nav .container .nav-menu .book .btn--book:hover {
   font-weight: 700;
   margin-bottom: 20px;
   color: #37373f;
-  font-family: var(--font-primary);
+  font-family: "Amatic SC", sans-serif;
 }
 .hero .container p {
   color: #4f4f5a;
@@ -195,7 +238,7 @@ nav .container .nav-menu .book .btn--book:hover {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 5px;
-  font-family: var(--font-default);
+  font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .about .container .call-us p {
   font-size: 28px;
@@ -218,20 +261,20 @@ nav .container .nav-menu .book .btn--book:hover {
   color: #ce1212;
 }
 
-.why-us .container .why-box {
+.why-us .container .why--box {
   padding: 30px;
   background: #ce1212;
   color: #fff;
 }
-.why-us .container .why-box h3 {
+.why-us .container .why--box h3 {
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 30px;
 }
-.why-us .container .why-box p {
+.why-us .container .why--box p {
   margin-bottom: 30px;
 }
-.why-us .container .why-box .more-btn {
+.why-us .container .why--box .more__btn {
   display: inline-block;
   background: rgba(255, 255, 255, 0.3);
   padding: 6px 30px 8px 30px;
@@ -239,11 +282,11 @@ nav .container .nav-menu .book .btn--book:hover {
   border-radius: 50px;
   transition: all ease-in-out 0.4s;
 }
-.why-us .container .why-box .more-btn:hover {
+.why-us .container .why--box .more__btn:hover {
   color: #ce1212;
   background: #fff;
 }
-.why-us .container .icon-box {
+.why-us .container .icon--box {
   text-align: center;
   background: #fff;
   padding: 40px 30px;
@@ -252,7 +295,7 @@ nav .container .nav-menu .book .btn--book:hover {
   border: 1px solid rgba(55, 55, 63, 0.1);
   transition: 0.3s;
 }
-.why-us .container .icon-box i {
+.why-us .container .icon--box i {
   color: #ce1212;
   margin-bottom: 30px;
   font-size: 32px;
@@ -265,39 +308,38 @@ nav .container .nav-menu .book .btn--book:hover {
   width: 64px;
   height: 64px;
 }
-.why-us .container .icon-box h4 {
+.why-us .container .icon--box h4 {
   font-size: 20px;
   font-weight: 400;
   margin: 0 0 30px 0;
-  font-family: var(--font-secondary);
 }
-.why-us .container .icon-box p {
+.why-us .container .icon--box p {
   font-size: 15px;
   color: #6c757d;
 }
-.why-us .container .icon-box:hover {
+.why-us .container .icon--box:hover {
   transform: scale(1.1);
 }
 
-.stats-counter {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/stats-bg.jpg) center center;
+.stats--counter {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img/stats-bg.jpg) center center;
   background-size: cover;
   padding: 100px 0;
 }
-.stats-counter .container .stats-item {
+.stats--counter .container .stats--item {
   padding: 30px;
   width: 100%;
 }
-.stats-counter .container .stats-item span {
+.stats--counter .container .stats--item span {
   font-size: 48px;
   display: block;
   color: #fff;
   font-weight: 700;
 }
-.stats-counter .container .stats-item p {
+.stats--counter .container .stats--item p {
   padding: 0;
   margin: 0;
-  font-family: var(--font-secondary);
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.6);
@@ -322,7 +364,6 @@ nav .container .nav-menu .book .btn--book:hover {
   font-size: 18px;
   font-weight: 400;
   margin: 0;
-  font-family: var(--font-secondary);
 }
 .menu .container .tab-content .tab-pane .tab-header {
   padding: 30px 0;
@@ -341,32 +382,31 @@ nav .container .nav-menu .book .btn--book:hover {
 .menu .container .tab-content .tab-pane > .active {
   display: block;
 }
-.menu .container .tab-content .menu-item {
+.menu .container .tab-content .menu--item {
   -moz-text-align-last: center;
        text-align-last: center;
 }
-.menu .container .tab-content .menu-item img {
+.menu .container .tab-content .menu--item img {
   padding: 0 60px;
   margin-bottom: 15px;
 }
-.menu .container .tab-content .menu-item a {
+.menu .container .tab-content .menu--item a {
   color: #ce1212;
   text-decoration: none;
 }
-.menu .container .tab-content .menu-item h4 {
+.menu .container .tab-content .menu--item h4 {
   font-size: 22px;
   font-weight: 500;
   color: #37373f;
-  font-family: var(--font-secondary);
   font-weight: 30px;
   margin-bottom: 5px;
 }
-.menu .container .tab-content .menu-item .ingredients {
-  font-family: var(--font-secondary);
+.menu .container .tab-content .menu--item .ingredients {
+  font-family: "Inter", sans-serif;
   color: #8d8d9b;
   margin-bottom: 5px;
 }
-.menu .container .tab-content .menu-item .price {
+.menu .container .tab-content .menu--item .price {
   font-size: 24px;
   font-weight: 700;
   color: #ce1212;
@@ -380,7 +420,7 @@ nav .container .nav-menu .book .btn--book:hover {
   box-shadow: 0px 0 30px rgba(55, 55, 63, 0.08);
   transition: 0.3s;
 }
-.chefs .container .chef--member .member--img {
+.chefs .container .chef--member .member__img {
   position: relative;
   overflow: hidden;
 }
@@ -391,7 +431,7 @@ nav .container .nav-menu .book .btn--book:hover {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
-  color: var(--color-secondary);
+  color: #37373f;
 }
 .chefs .container .chef--member .member--info span {
   display: block;
@@ -432,12 +472,6 @@ nav .container .nav-menu .book .btn--book:hover {
   padding: 12px 15px;
 }
 .book-a-table .container .reservation-form-bg form button {
-  font-size: 14px;
-  color: #fff;
-  background: #ce1212;
-  transition: 0.4s;
-  border-radius: 50px;
-  border: 0;
   padding: 14px 60px;
 }
 .book-a-table .container .reservation-form-bg input {
@@ -481,55 +515,5 @@ nav .container .nav-menu .book .btn--book:hover {
   font-size: 14px;
 }
 .contact .container form button {
-  font-size: 14px;
-  color: #fff;
-  background: #ce1212;
-  transition: 0.4s;
-  border-radius: 50px;
-  border: 0;
   padding: 12px 40px;
-}
-
-.footer {
-  font-size: 14px;
-  background-color: #1f1f24;
-  padding: 50px 0;
-  color: rgba(255, 255, 255, 0.7);
-}
-.footer .icon {
-  margin-right: 15px;
-  font-size: 24px;
-}
-.footer h4 {
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  padding-bottom: 5px;
-  color: #fff;
-}
-.footer .social-links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-right: 10px;
-  transition: 0.3s;
-}
-.footer .copyright {
-  text-align: center;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.footer .credits {
-  padding-top: 4px;
-  text-align: center;
-  font-size: 13px;
-}
-.footer .credits a {
-  color: #fff;
-}/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=style.css.map */

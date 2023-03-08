@@ -1,0 +1,24 @@
+mixin chef(imgSource, name, title, description)
+  .chef--member
+    .member__img
+      img.img-fluid(src=imgSource alt='')
+    .member--info
+      h4=name
+      span=title
+      p=description
+          
+section#chefs.chefs.section-bg
+  .container(data-aos='fade-up')
+    .section__header
+      h2 Chefs
+      p
+        | Our 
+        span Proffesional
+        |  Chefs
+    .row.gy-4
+      .col-lg-4.col-md-6.d-flex.align-items-stretch(data-aos='fade-up' data-aos-delay='100')
+        +chef('/assets/img/chefs/chefs-1.jpg', 'Sarah Jhonson', 'Patissier', 'Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.')
+      .col-lg-4.col-md-6.d-flex.align-items-stretch(data-aos='fade-up' data-aos-delay='200')
+        +chef('/assets/img/chefs/chefs-2.jpg', 'Sarah Jhonson', 'Patissier', 'Quo esse repellendus quia id. Est eum et accusantium pariatur fugit nihil suscipit corporis. Voluptate sed quas reiciendis animi neque sapiente.')
+      .col-lg-4.col-md-6.d-flex.align-items-stretch(data-aos='fade-up' data-aos-delay='300')
+        +chef('/assets/img/chefs/chefs-3.jpg', 'William Anderson', 'Cook', 'Vero omnis enim consequatur. Voluptas consectetur unde qui molestiae deserunt. Voluptate sed quas reiciendis animi neque sapiente.')

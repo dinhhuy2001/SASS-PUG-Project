@@ -1,0 +1,56 @@
+mixin menuItem(itemImg, name, ingredient, price)
+  .col-lg-4.menu--item
+    a.glightbox(href=itemImg)
+      img.menu__img.img-fluid(src=itemImg alt='')
+    h4= name
+    p.ingredients= ingredient
+    p.price= price
+
+mixin menu()
+  .row.gy-5
+    +menuItem('/assets/img/menu/menu-item-1.png','Magnam Tiste','Lorem, deren, trataro, filede, nerada','$5.95')
+    +menuItem('/assets/img/menu/menu-item-2.png','Aut Luia','Lorem, deren, trataro, filede, nerada','$14.95')
+    +menuItem('/assets/img/menu/menu-item-3.png','Est Eligendi','Lorem, deren, trataro, filede, nerada','$8.95')
+    +menuItem('/assets/img/menu/menu-item-4.png','Eos Luibusdam','Lorem, deren, trataro, filede, nerada','$12.95')
+    +menuItem('/assets/img/menu/menu-item-5.png','Magnam Tiste','Lorem, deren, trataro, filede, nerada','$5.95')
+    +menuItem('/assets/img/menu/menu-item-6.png','Laboriosam Direva','Lorem, deren, trataro, filede, nerada','$5.95')
+
+section#menu.menu
+  .container(data-aos='fade-up')
+    .section__header
+      h2 Our Menu
+      p
+        | Check Our 
+        span Yummy Menu
+    ul.nav.nav-tabs.d-flex.justify-content-center(data-aos='fade-up' data-aos-delay='200')
+      li.nav-item
+        a.nav-link.active.show(data-bs-toggle='tab' data-bs-target='#menu-starters')
+          h4 Starters
+          
+      - const menu = {'#menu-breakfast': 'Breakfast', '#menu-lunch': 'Lunch', '#menu-dinner': 'Dinner'}
+      each n, i in menu 
+        li.nav-item
+          a.nav-link(data-bs-toggle='tab' data-bs-target=i)
+            h4= n
+
+    .tab-content(data-aos='fade-up' data-aos-delay='300')
+      #menu--starters.tab-pane.fade.active.show
+        .tab-header.text-center
+          p Menu
+          h3 Starters
+        +menu
+      #menu--breakfast.tab-pane.fade
+        .tab-header.text-center
+          p Menu
+          h3 Breakfast
+        +menu
+      #menu--lunch.tab-pane.fade
+        .tab-header.text-center
+          p Menu
+          h3 Lunch
+        +menu
+      #menu--dinner.tab-pane.fade
+        .tab-header.text-center
+          p Menu
+          h3 Dinner
+        +menu

@@ -1,0 +1,28 @@
+section#about.about
+  .container(data-aos='fade-up')
+    .section__header
+      h2 About Us
+      p
+        | Learn More 
+        span About Us
+    .row.gy-4
+      .col-lg-7.position-relative.about__img(style='background-image: url(/assets/img/about.jpg)' data-aos='fade-up' data-aos-delay='150')
+        .call-us.position-absolute
+          h4 Book a Table
+          p +1 5589 55488 55
+      .col-lg-5.d-flex.align-items-end(data-aos='fade-up' data-aos-delay='300')
+        .content.ps-0.ps-lg-5
+          p.fst-italic
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            | incididunt ut labore et dolore magna aliqua.
+          - const description = ['Ullamco laboris nisi ut aliquip ex ea commodo consequat.','Ullamco laboris nisi ut aliquip ex ea commodo consequat.','Ullamco laboris nisi ut aliquip ex ea commodo consequat.']
+          ul
+            each val in description
+              li=val
+                i.bx.bx-check-double
+          p
+            | Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            | reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            | Excepteur sint occaecat cupidatat non proident
+          .position-relative.mt-4
+            img.img-fluid(src='/assets/img/about-2.jpg' alt='')

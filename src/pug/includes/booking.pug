@@ -1,0 +1,36 @@
+section#book-a-table.book-a-table
+  .container(data-aos='fade-up')
+    .section__header
+      h2 Book A Table
+      p
+        | Book 
+        span Your Stay
+        |  With Us
+    .row.g-0
+      .col-lg-4.reservation__img(style='background-image: url(/assets/img/reservation.jpg)' data-aos='zoom-out' data-aos-delay='200')
+      .col-lg-8.d-flex.align-items-center.reservation-form-bg
+        form.php-email-form(action='forms/book-a-table.php' method='post' role='form' data-aos='fade-up' data-aos-delay='100')
+          .row.gy-4
+            .col-lg-4.col-md-6
+              input#name.form-control(type='text' name='name' placeholder='Your Name' data-rule='minlen:4' data-msg='Please enter at least 4 chars')
+              .validate
+            .col-lg-4.col-md-6
+              input#email.form-control(type='email' name='email' placeholder='Your Email' data-rule='email' data-msg='Please enter a valid email')
+              .validate
+            .col-lg-4.col-md-6
+              input#phone.form-control(type='text' name='phone' placeholder='Your Phone' data-rule='minlen:4' data-msg='Please enter at least 4 chars')
+              .validate
+            .col-lg-4.col-md-6
+              input#date.form-control(type='text' name='date' placeholder='Date' data-rule='minlen:4' data-msg='Please enter at least 4 chars')
+              .validate
+            .col-lg-4.col-md-6
+              input#time.form-control(type='text' name='time' placeholder='Time' data-rule='minlen:4' data-msg='Please enter at least 4 chars')
+              .validate
+            .col-lg-4.col-md-6
+              input#people.form-control(type='number' name='people' placeholder='# of people' data-rule='minlen:1' data-msg='Please enter at least 1 chars')
+              .validate
+          .form-group.mt-3
+            textarea.form-control(name='message' rows='5' placeholder='Message')
+            .validate
+          .text-center.mt-3
+            button(type='submit') Book a Table

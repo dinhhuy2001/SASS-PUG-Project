@@ -1,0 +1,51 @@
+section#contact.contact
+  .container(data-aos='fade-up')
+    .section__header
+      h2 Contact
+      p
+        | Need Help? 
+        span Contact Us
+    .mb-3
+      iframe(style='border: 0; width: 100%; height: 350px' src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621' frameborder='0' allowfullscreen='')
+    .row.gy-4
+      .col-md-6
+        .info--item.d-flex.align-items-center
+          i.icon.bx.bx-map-alt.flex-shrink-0
+          div
+            h3 Our Address
+            p A108 Adam Street, New York, NY 535022
+      .col-md-6
+        .info--item.d-flex.align-items-center
+          i.icon.bx.bxl-gmail.flex-shrink-0
+          div
+            h3 Email Us
+            p contact@example.com
+      .col-md-6
+        .info--item.d-flex.align-items-center
+          i.icon.bx.bx-phone-call.flex-shrink-0
+          div
+            h3 Call Us
+            p +1 5589 55488 55
+      .col-md-6
+        .info--item.d-flex.align-items-center
+          i.icon.bx.bx-share-alt.flex-shrink-0
+          div
+            h3 Opening Hours
+            div
+              strong Mon-Sat:
+              |  11AM - 23PM; 
+              strong Sunday:
+              |  Closed
+    form.php-email-form.p-3.p-md-4(method='post' role='form')
+      .row
+        .col-xl-6.form--group
+          input#name.form-control(type='text' name='name' placeholder='Your Name' required='')
+        .col-xl-6.form--group
+          input#email.form-control(type='email' name='email' placeholder='Your Email' required='')
+      .form--group
+        input#subject.form-control(type='text' name='subject' placeholder='Subject' required='')
+      .form--group
+        textarea.form-control(name='message' rows='5' placeholder='Message' required='')
+      .my-3
+      .text-center
+        button(type='submit') Send Message

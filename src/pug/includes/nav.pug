@@ -1,0 +1,17 @@
+nav.navbar.navbar-expand-lg.fixed-top.d-flex
+  .container
+    a.navbar-brand.d-flex.align-items-center.me-auto.me-lg-0(href='index.html')
+      h1 Yummy
+      span .
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.nav-menu.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#hero') Home
+        - const url = {'#about': 'About', '#menu': 'Menu', '#chefs': 'Chefs', '#contact': 'Contact'}
+        each n, i in url
+          li.nav-item
+            a.nav-link(href=i)= n
+      .book
+        a.btn--book(href='#book-a-table') Book a Table

@@ -1,143 +1,7 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-$color-default: #212529;
-$color-primary: #ce1212;
-$color-secondary: #37373f;
-
-:root {
-    --font-default: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
-        'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-primary: 'Amatic SC', sans-serif;
-    --font-secondary: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-}
-
-@mixin button {
-    font-size: 14px;
-    color: #fff;
-    background: $color-primary;
-    transition: 0.4s;
-    border-radius: 50px;
-    border: 0;
-}
-
-body {
-    font-family: var(--font-default);
-    color: $color-default;
-}
-
-section {
-    scroll-margin-top: 90px;
-    overflow: hidden;
-    padding: 80px 0;
-}
-
-.section__header {
-    text-align: center;
-    padding-bottom: 30px;
-    h2 {
-        font-size: 13px;
-        letter-spacing: 1px;
-        font-weight: 400;
-        margin: 0;
-        padding: 0;
-        color: #7f7f90;
-        text-transform: uppercase;
-        font-family: var(--font-default);
-    }
-    p {
-        margin: 0;
-        font-size: 48px;
-        font-weight: 400;
-        font-family: var(--font-primary);
-        span {
-            color: $color-primary;
-        }
-    }
-}
-
-a {
-    text-decoration: none !important;
-}
-img {
-    vertical-align: center;
-}
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-a:hover {
-    color: $color-primary;
-    text-decoration: none;
-}
-
-.section-bg {
-    background-color: #eee;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-secondary);
-}
-
-nav {
-    height: 90px;
-    background: #fff;
-    transition: all 0.5s;
-    z-index: 997;
-    border-bottom: 1px solid #fff;
-    .container {
-        .navbar-brand {
-            h1 {
-                font-size: 28px;
-                font-weight: 700;
-            }
-            span {
-                font-size: 28px;
-                font-weight: 700;
-                color: $color-primary;
-            }
-        }
-        .nav-menu {
-            margin-left: 20px;
-            .navbar-nav {
-                margin: auto;
-                .nav-item {
-                    padding: 10px 0 10px 28px;
-                    position: relative;
-                    white-space: nowrap;
-                    .nav-link {
-                        padding: 0 3px;
-                        font-family: var(--font-secondary);
-                        font-size: 16px;
-                        font-weight: 600;
-                        color: #7f7f90;
-                        white-space: nowrap;
-                    }
-                }
-            }
-            .book {
-                button {
-                    @include button;
-                    padding: 9px 20px;
-                    margin-left: 30px;
-                }
-                .btn--book:hover {
-                    color: #fff;
-                    background: rgba(206, 18, 18, 0.8);
-                }
-            }
-        }
-    }
-}
+@use 'layouts/common';
+@use 'layouts/variables';
+@use 'layouts/footer';
+@use 'layouts/header';
 
 .hero {
     width: 100%;
@@ -151,8 +15,8 @@ nav {
             font-size: 64px;
             font-weight: 700;
             margin-bottom: 20px;
-            color: $color-secondary;
-            font-family: var(--font-primary);
+            color: variables.$color-secondary;
+            font-family: variables.$font-primary;
         }
         p {
             color: #4f4f5a;
@@ -168,17 +32,17 @@ nav {
             border-radius: 50px;
             transition: 0.5s;
             color: #fff;
-            background: $color-primary;
+            background: variables.$color-primary;
             box-shadow: 0 8px 28px rgb(206 18 18 / 20%);
         }
         .btn-watch-video {
             font-size: 16px;
             transition: 0.5s;
             margin-left: 25px;
-            color: $color-secondary;
+            color: variables.$color-secondary;
             font-weight: 600;
             i {
-                color: $color-primary;
+                color: variables.$color-primary;
                 font-size: 32px;
                 transition: 0.3s;
                 line-height: 0;
@@ -186,7 +50,7 @@ nav {
             }
             span {
                 font-size: 16px;
-                color: $color-secondary;
+                color: variables.$color-secondary;
                 font-weight: 600;
             }
         }
@@ -207,12 +71,12 @@ nav {
                 font-size: 24px;
                 font-weight: 700;
                 margin-bottom: 5px;
-                font-family: var(--font-default);
+                font-family: variables.$font-default;
             }
             p {
                 font-size: 28px;
                 font-weight: 700;
-                color: $color-primary;
+                color: variables.$color-primary;
             }
         }
         .content {
@@ -227,7 +91,7 @@ nav {
                         font-size: 20px;
                         left: 0;
                         top: 3px;
-                        color: $color-primary;
+                        color: variables.$color-primary;
                     }
                 }
             }
@@ -237,9 +101,9 @@ nav {
 
 .why-us {
     .container {
-        .why-box {
+        .why--box {
             padding: 30px;
-            background: $color-primary;
+            background: variables.$color-primary;
             color: #fff;
             h3 {
                 font-weight: 700;
@@ -249,7 +113,7 @@ nav {
             p {
                 margin-bottom: 30px;
             }
-            .more-btn {
+            .more__btn {
                 display: inline-block;
                 background: rgba(255, 255, 255, 0.3);
                 padding: 6px 30px 8px 30px;
@@ -257,12 +121,12 @@ nav {
                 border-radius: 50px;
                 transition: all ease-in-out 0.4s;
             }
-            .more-btn:hover {
-                color: $color-primary;
+            .more__btn:hover {
+                color: variables.$color-primary;
                 background: #fff;
             }
         }
-        .icon-box {
+        .icon--box {
             text-align: center;
             background: #fff;
             padding: 40px 30px;
@@ -271,7 +135,7 @@ nav {
             border: 1px solid rgba(55, 55, 63, 0.1);
             transition: 0.3s;
             i {
-                color: $color-primary;
+                color: variables.$color-primary;
                 margin-bottom: 30px;
                 font-size: 32px;
                 margin-bottom: 30px;
@@ -287,25 +151,24 @@ nav {
                 font-size: 20px;
                 font-weight: 400;
                 margin: 0 0 30px 0;
-                font-family: var(--font-secondary);
             }
             p {
                 font-size: 15px;
                 color: #6c757d;
             }
         }
-        .icon-box:hover {
+        .icon--box:hover {
             transform: scale(1.1);
         }
     }
 }
 
-.stats-counter {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/stats-bg.jpg) center center;
+.stats--counter {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/img/stats-bg.jpg) center center;
     background-size: cover;
     padding: 100px 0;
     .container {
-        .stats-item {
+        .stats--item {
             padding: 30px;
             width: 100%;
             span {
@@ -317,7 +180,7 @@ nav {
             p {
                 padding: 0;
                 margin: 0;
-                font-family: var(--font-secondary);
+                font-family: variables.$font-secondary;
                 font-size: 16px;
                 font-weight: 700;
                 color: rgba(255, 255, 255, 0.6);
@@ -328,15 +191,15 @@ nav {
 
 .menu {
     .active {
-        color: $color-primary !important;
-        border-color: $color-primary !important;
+        color: variables.$color-primary !important;
+        border-color: variables.$color-primary !important;
     }
     .container {
         .nav-link {
             margin: 0 10px;
             padding: 10px 5px;
             transition: 0.3s;
-            color: $color-secondary;
+            color: variables.$color-secondary;
             border-radius: 0;
             cursor: pointer;
             height: 100%;
@@ -346,7 +209,6 @@ nav {
                 font-size: 18px;
                 font-weight: 400;
                 margin: 0;
-                font-family: var(--font-secondary);
             }
         }
         .tab-content {
@@ -362,7 +224,7 @@ nav {
                     h3 {
                         font-size: 36px;
                         font-weight: 600;
-                        color: $color-primary;
+                        color: variables.$color-primary;
                     }
                 }
             }
@@ -370,33 +232,32 @@ nav {
             .tab-pane > .active {
                 display: block;
             }
-            .menu-item {
+            .menu--item {
                 text-align-last: center;
                 img {
                     padding: 0 60px;
                     margin-bottom: 15px;
                 }
                 a {
-                    color: $color-primary;
+                    color: variables.$color-primary;
                     text-decoration: none;
                 }
                 h4 {
                     font-size: 22px;
                     font-weight: 500;
-                    color: $color-secondary;
-                    font-family: var(--font-secondary);
+                    color: variables.$color-secondary;
                     font-weight: 30px;
                     margin-bottom: 5px;
                 }
                 .ingredients {
-                    font-family: var(--font-secondary);
+                    font-family: variables.$font-secondary;
                     color: #8d8d9b;
                     margin-bottom: 5px;
                 }
                 .price {
                     font-size: 24px;
                     font-weight: 700;
-                    color: $color-primary;
+                    color: variables.$color-primary;
                 }
             }
         }
@@ -412,7 +273,7 @@ nav {
             background: #fff;
             box-shadow: 0px 0 30px rgb(55 55 63 / 8%);
             transition: 0.3s;
-            .member--img {
+            .member__img {
                 position: relative;
                 overflow: hidden;
             }
@@ -422,7 +283,7 @@ nav {
                     font-weight: 700;
                     margin-bottom: 5px;
                     font-size: 20px;
-                    color: var(--color-secondary);
+                    color: variables.$color-secondary;
                 }
                 span {
                     display: block;
@@ -466,7 +327,7 @@ nav {
                     padding: 12px 15px;
                 }
                 button {
-                    @include button;
+                    @extend %button;
                     padding: 14px 60px;
                 }
             }
@@ -495,7 +356,7 @@ nav {
                 font-size: 24px;
                 line-height: 0;
                 color: #fff;
-                background: $color-primary;
+                background: variables.$color-primary;
                 border-radius: 50%;
                 margin-right: 15px;
             }
@@ -515,55 +376,9 @@ nav {
                 }
             }
             button {
-                @include button;
+                @extend %button;
                 padding: 12px 40px;
             }
-        }
-    }
-}
-
-.footer {
-    font-size: 14px;
-    background-color: #1f1f24;
-    padding: 50px 0;
-    color: rgba(255, 255, 255, 0.7);
-    .icon {
-        margin-right: 15px;
-        font-size: 24px;
-    }
-    h4 {
-        font-size: 16px;
-        font-weight: bold;
-        position: relative;
-        padding-bottom: 5px;
-        color: #fff;
-    }
-    .social-links {
-        a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.7);
-            margin-right: 10px;
-            transition: 0.3s;
-        }
-    }
-    .copyright {
-        text-align: center;
-        padding-top: 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .credits {
-        padding-top: 4px;
-        text-align: center;
-        font-size: 13px;
-        a {
-            color: #fff;
         }
     }
 }
